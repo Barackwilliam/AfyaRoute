@@ -1,154 +1,132 @@
 <!DOCTYPE html>
 <html lang="sw">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AfyaRoute | Mfumo wa Kupanga Miadi ya Daktari</title>
-    <meta name="description" content="AfyaRoute ni mfumo wa kisasa wa kukusaidia kupanga miadi ya kuonana na daktari na kupata ushauri wa awali kuhusu dalili zako.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AfyaRoute – Afya Yako, Njia Yako</title>
+  
+  <!-- GetButton script -->
+  <script defer src="https://static.getbutton.io/widget/bundle.js?id=bvP1h"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: white;
+      background: linear-gradient(135deg, #128C7E 0%, #25D366 50%, #0E7A6A 100%);
+      overflow-x: hidden;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Subtle background pattern / texture */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.08) 0%, transparent 40%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .container {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 20px;
+      max-width: 900px;
+      animation: fadeIn 1.8s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      font-weight: bold;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+      backdrop-filter: blur(6px);
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      margin-bottom: 12px;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+
+    p.tagline {
+      font-size: 1.35rem;
+      opacity: 0.95;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .glow-btn {
+      display: inline-block;
+      padding: 16px 42px;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: white;
+      background: #25D366;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45);
+      transition: all 0.35s ease;
+      border: 2px solid rgba(255,255,255,0.25);
+    }
+
+    .glow-btn:hover {
+      transform: translateY(-4px) scale(1.06);
+      box-shadow: 0 18px 40px rgba(37, 211, 102, 0.6);
+      background: #128C7E;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 { font-size: 2.6rem; }
+      .logo { width: 100px; height: 100px; font-size: 2.8rem; }
+      p.tagline { font-size: 1.15rem; }
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 2.2rem; }
+      .glow-btn { padding: 14px 36px; font-size: 1.15rem; }
+    }
+  </style>
 </head>
 <body>
 
-<header>
+  <div class="container">
+    <div class="logo">🩺</div>
     <h1>AfyaRoute</h1>
-    <h2>Njia Rahisi ya Kupata Huduma ya Afya kwa Wakati</h2>
-    <p>
-        AfyaRoute ni mfumo wa kidijitali unaowasaidia wagonjwa kupanga miadi ya kuonana na daktari
-        katika hospitali au clinic mbalimbali. Tunasaidia pia kutoa ushauri wa awali kuhusu dalili
-        kabla ya kupanga miadi.
-    </p>
-</header>
-
-<hr>
-
-<section>
-    <h2>Jinsi AfyaRoute Inavyofanya Kazi</h2>
-
-    <h3>1. Pokea na Elezea Tatizo Lako</h3>
-    <p>
-        Reception Bot wetu atakupokea kwa heshima na kukuuliza maswali mafupi ili kuelewa
-        hali yako vizuri. Utachagua sababu ya kuja kama vile:
-    </p>
-    <ul>
-        <li>Nataka kumuona daktari</li>
-        <li>Nataka follow-up na daktari niliyewahi kumuona</li>
-        <li>Nahitaji ushauri nifanye nini</li>
-        <li>Sijui ni daktari gani, nisaidieni</li>
-    </ul>
-
-    <h3>2. Tambua Sehemu ya Tatizo</h3>
-    <p>Utachagua sehemu ya mwili inayokusumbua:</p>
-    <ul>
-        <li>Macho</li>
-        <li>Masikio / Pua / Koo</li>
-        <li>Ngozi</li>
-        <li>Tumbo</li>
-        <li>Moyo au Shinikizo la damu</li>
-        <li>Mfumo wa fahamu</li>
-        <li>Afya ya jumla</li>
-        <li>Sijui</li>
-    </ul>
-
-    <h3>3. Kiwango cha Uharaka</h3>
-    <p>
-        Mfumo utakuuliza hali yako ni ya haraka kiasi gani ili kusaidia kupanga huduma sahihi:
-    </p>
-    <ul>
-        <li>Sio ya haraka, naweza kusubiri</li>
-        <li>Inahitaji kuonwa ndani ya siku 1–2</li>
-        <li>Inahitaji kuonwa leo</li>
-        <li>Ni hali hatarishi (dharura)</li>
-    </ul>
-</section>
-
-<hr>
-
-<section>
-    <h2>Health Assist Bot – Ushauri wa Awali</h2>
-    <p>
-        Kama una dalili za ghafla au hujui tatizo lako ni nini, unaweza kuongea na Health Assist Bot.
-        Bot huyu atasikiliza maelezo yako na kukupa mwongozo wa awali.
+    <p class="tagline">
+      Afya yako iko mkononi mwako – Tafuta daktari, dawa au ushauri haraka na salama.
     </p>
 
-    <h3>Mifano ya Dalili Zinazoweza Kutambuliwa</h3>
-    <ul>
-        <li>Maumivu ya kichwa</li>
-        <li>Kikohozi na homa</li>
-        <li>Maumivu ya tumbo</li>
-        <li>Presha au mapigo kwenda kasi</li>
-        <li>Kizunguzungu</li>
-        <li>Kupumua kwa shida</li>
-        <li>Upele au kuwasha ngozi</li>
-        <li>Maumivu ya kifua</li>
-        <li>Degedege</li>
-        <li>Kupoteza fahamu</li>
-    </ul>
-
-    <p>
-        Bot atatoa ushauri wa jumla kama vile kupumzika, kunywa maji ya kutosha,
-        au kufuatilia hali kwa muda mfupi. Pia atashauri kumuona daktari pale inapohitajika.
-    </p>
-
-    <p>
-        Kwa hali za dharura kama kupoteza fahamu, kutokwa damu nyingi,
-        au kushindwa kupumua, mfumo utashauri kwenda hospitali mara moja.
-    </p>
-</section>
-
-<hr>
-
-<section>
-    <h2>Upangaji wa Miadi</h2>
-
-    <h3>Eneo Ulipo</h3>
-    <ul>
-        <li>Ilala</li>
-        <li>Kinondoni</li>
-        <li>Temeke</li>
-        <li>Ubungo</li>
-        <li>Kigamboni</li>
-        <li>Mkoa mwingine</li>
-    </ul>
-
-    <h3>Muda Unaopendelea</h3>
-    <ul>
-        <li>Asubuhi</li>
-        <li>Mchana</li>
-        <li>Jioni</li>
-        <li>Siku yoyote</li>
-        <li>Tarehe maalum</li>
-    </ul>
-
-    <h3>Upendeleo wa Daktari</h3>
-    <ul>
-        <li>Ndiyo, tayari namjua</li>
-        <li>Hapana, nipendekeze daktari</li>
-        <li>Sijali, yeyote anayepatikana</li>
-    </ul>
-</section>
-
-<hr>
-
-<section>
-    <h2>Usalama wa Taarifa</h2>
-    <p>
-        AfyaRoute inalinda taarifa zako zote kwa usiri mkubwa.
-        Taarifa unazotoa zinatumika tu kukusaidia kupata huduma sahihi.
-    </p>
-</section>
-
-<hr>
-
-<section>
-    <h2>Maelekezo Muhimu</h2>
-    <p>
-        AfyaRoute haitoi dawa wala dozi. Ushauri unaotolewa ni wa jumla tu.
-        Kwa uchunguzi sahihi na matibabu, ni muhimu kumuona daktari.
-    </p>
-</section>
-
-<footer>
-    <p>&copy; 2026 AfyaRoute. Mfumo wa kisasa wa kupanga miadi ya daktari.</p>
-</footer>
+    <!-- Unaweza kuweka button hii kama sample au uondoe kama unategemea GetButton tu -->
+    <!-- <a href="https://wa.me/255XXXXXXXXX" class="glow-btn" target="_blank">Ongea nasi kwenye WhatsApp</a> -->
+  </div>
 
 </body>
 </html>
